@@ -26,5 +26,7 @@ The official website for Possible Web.
 3. Unlimited Support
 4. Site Specific SEO
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d34e6dc8-8974-47ca-af51-34fba81029ba/deploy-status)](https://app.netlify.com/sites/posw-www/deploys)
+
 
 

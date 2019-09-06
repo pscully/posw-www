@@ -17,7 +17,6 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-        <script src="https://paperform.co/__embed"></script>
       </Html>
     );
   }
