@@ -10,13 +10,13 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <script src="https://paperform.co/__embed"></script>
           <meta name="csrf-token" content="" />
         </Head>
         <body>
           <Main />
           <NextScript />
         </body>
+        {/* <script src="https://paperform.co/__embed"></script> */}
       </Html>
     );
   }

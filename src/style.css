@@ -33,7 +33,8 @@ html {
 
 body {
   margin: 0;
-  height: 100%
+  height: 100%;
+  background: #ececec;
 }
 
 /**
@@ -479,7 +480,7 @@ template {
 /* Custom Classes using Tailwind */
 
 .text__body {
-  @apply mt-3 text-lg leading-relaxed;
+  @apply mt-3 text-xl text-black leading-relaxed;
 }
 
 .link__body {
@@ -491,13 +492,48 @@ template {
 }
 
 .h2 {
-  @apply text-3xl font-bold leading-none;
+  @apply text-4xl font-bold leading-none;
 }
 
 .h3 {
-  @apply text-2xl;
+  @apply text-3xl;
 }
 
 #page-wrap {
   overflow: auto;
+}
+
+.blog__text h1 {
+  @apply text-5xl font-bold;
+}
+
+.blog__text h2 {
+  @apply text-4xl font-bold  tracking-wide my-2;	
+}
+
+.blog__text h3 {
+  @apply text-3xl font-bold tracking-wide my-2;	
+}
+
+.blog__text p {
+  @apply mt-3 text-xl text-black leading-relaxed tracking-wide;	
+}
+
+.blog__text a {
+  text-decoration: none;
+  color: #32518B;
+  font-weight: bold;
+}
+.blog__text a:hover {
+  color: #982c61;
+  border-bottom: 2px solid #4a4a4a;
+}
+
+.blog__text ul {
+  list-style-type: disc;
+  margin-left: 1.75rem;
+}
+
+.blog__text ul li {
+  @apply mt-3 text-lg text-black leading-relaxed;
 }

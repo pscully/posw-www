@@ -1,7 +1,11 @@
 import React from "react";
 import { NextSeo } from "next-seo";
+import groq from "groq";
+import client from "../client";
 import Card from "../components/card/card";
 import Button from "../components/button/button";
+import Form from "../components/form/form";
+import Link from "next/link";
 import "../style.css";
 
 const cardOneTitle = "CARE";
@@ -18,17 +22,17 @@ const cardThreeBody =
 
 const cardFourTitle = "WORK";
 const cardFourBody =
-  "If you need custom PHP development we've got you covered. From developing websites from scratch, custom plugins, or integrations with 3rd party platforms, we deliver high quality.";
+  "If you need custom PHP development we've got you covered. From developing websites from scratch, custom plugins, or integrations with 3rd party platforms.";
 
 const cardFiveTitle = "DRED";
 const cardFiveBody =
   "Our version of SEO. Digital Real Estate Domination - it's SEO but to the next level. We rank more than just your website, we get you as many spots as possible on search results.";
 
-class Plans extends React.Component {
-  render() {
+const Services = props => {
+  const { posts = [] } = props;
     return (
       <>
-        {/* <NextSeo
+        <NextSeo
           title="WordPress Managed Right - Hosting / Support / SEO | Possible Web"
           description="Possible Web is a top rated team of WordPress experts. We care for your website how we would want our cared for. Get access today."
           canonical="https://possibleweb.com/plans/"
@@ -54,11 +58,11 @@ class Plans extends React.Component {
             site: "@site",
             cardType: "summary_large_image"
           }}
-        /> */}
+        />
         <div className="container flex flex-wrap overflow-hidden mx-auto">
-          <div className="w-full overflow-hidden sm:w-full md:w-full lg:w-1/2 xl:w-1/2 pt-8 lg:py-24">
+          <div className="w-full overflow-hidden sm:w-full md:w-full lg:w-1/2 xl:w-1/2 pt-4 lg:py-12">
             <div className="mx-4">
-              <h1 className="h1 text-gray-900">Fair Pricing. Tons of Value.</h1>
+              <h1 className="h1 text-gray-900">WordPress Services</h1>
               <p className="text__body text-gray-900">
                 Our WordPress services are based on giving you more. As a
                 Possible Web client you get the best technology, unlimited
@@ -70,12 +74,12 @@ class Plans extends React.Component {
                 <Button
                   className="button--purple"
                   text="GET ACCESS"
-                  type="modal"
+                  link="https://possibleweb.spp.io/signup"
                 />
               </div>
             </div>
           </div>
-          <div className="w-full overflow-hidden sm:w-full md:w-full lg:w-1/2 xl:w-1/2 pt-10 md:py-24">
+          <div className="w-full overflow-hidden sm:w-full md:w-full lg:w-1/2 xl:w-1/2 pt-6 md:py-12">
             <img
               src="https://files.possibleweb.com/file/w_600,h_400/possibleweb/fast-affordable-websites.png"
               alt="Fast, Affordable Websites"
@@ -83,16 +87,14 @@ class Plans extends React.Component {
             />
           </div>
         </div>
-        <div className="container mx-auto my-8 p-4">
+        <div className="container mx-auto p-4">
           <div className="flex flex-wrap items-center -mx-2">
             <div className="w-full lg:w-1/3 sm:w-1/2 px-2">
-              <h2 className="h2">WordPress Services</h2>
+              <h2 className="h2">Fair Pricing. Tons of Value.</h2>
               <p className="text__body">
-                Your quest to find reliable WordPress services ends here. If
-                your business relies on WordPress, you can rely on us whether it
-                is hosting and support or SEO and custom development. Get more
-                out of your website by relying on one true partner for all your
-                website needs.
+                Our team specializes in WordPress. We can design, build, support, maintain, 
+                and market a business website for you. All of your website needs in one place. 
+                
               </p>
             </div>
 
@@ -100,7 +102,7 @@ class Plans extends React.Component {
               <Card
                 title={cardOneTitle}
                 body={cardOneBody}
-                link="/agency"
+                link="/wordpress-services/managed-hosting"
                 text="Start now"
               />
             </div>
@@ -109,7 +111,7 @@ class Plans extends React.Component {
               <Card
                 title={cardTwoTitle}
                 body={cardTwoBody}
-                link="/agency"
+                link="/wordpress-services/task"
                 text="We can help"
               />
             </div>
@@ -119,7 +121,7 @@ class Plans extends React.Component {
               <Card
                 title={cardThreeTitle}
                 body={cardThreeBody}
-                link="/agency"
+                link="/wordpress-services/increase-speed"
                 text="Get Faster"
               />
             </div>
@@ -128,7 +130,7 @@ class Plans extends React.Component {
               <Card
                 title={cardFourTitle}
                 body={cardFourBody}
-                link="/agency"
+                link="/wordpress-services/development"
                 text="Get a quote"
               />
             </div>
@@ -137,7 +139,7 @@ class Plans extends React.Component {
               <Card
                 title={cardFiveTitle}
                 body={cardFiveBody}
-                link="/agency"
+                link="/wordpress-services/seo"
                 text="SEO Programs"
               />
             </div>
@@ -163,6 +165,43 @@ class Plans extends React.Component {
             </div>
           </div>
         </div>
+        <div>
+				<div className="container flex flex-wrap overflow-hidden mx-auto">
+					<div className="w-full overflow-hidden py-8 mt-8 bg-white rounded-lg shadow-lg mx-4">
+						<div className="mx-4">
+							<div className="h2">Recent Posts on WordPress</div>
+							<ul>
+								{posts.map(
+									({ _id, title = "", slug = "", _updatedAt = "" }) =>
+										slug && (
+											<li key={_id} className="my-4">
+												<Link href="/[slug]" as={`/${slug.current}`}>
+													<a className="text-2xl underline">{title}</a>
+												</Link>{" "}
+											</li>
+										)
+								)}
+							</ul>
+						</div>
+					</div>
+					<div className="container flex justify-between flex-wrap overflow-hidden mx-auto mb-8">
+						<div className="w-full md:w-7/12 overflow-hidden py-8 bg-white rounded-lg shadow-lg mx-4 mt-8">
+							<div className="mx-8">
+								<span className="text-2xl pt-4">
+									Get our internal SEO notes. What we are learning, testing,
+									and optimizing. Apply our notes to your business and see results.
+								</span>
+
+							</div>
+						</div>
+						<div className="w-full md:w-4/12 overflow-hidden py-8 bg-white rounded-lg shadow-lg mx-4 mt-8">
+							<div className="flex justify-center">
+								<Form />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
         <style jsx>
           {`
             #section--img {
@@ -186,7 +225,12 @@ class Plans extends React.Component {
         </style>
       </>
     );
-  }
 }
 
-export default Plans;
+Services.getInitialProps = async () => ({
+	posts: await client.fetch(groq`
+      *[_type == "post"]|order(publishedAt desc)
+    `)
+});
+
+export default Services;

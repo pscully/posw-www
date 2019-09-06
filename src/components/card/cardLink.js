@@ -9,7 +9,7 @@ const CardLink = props => {
 			<style jsx>{`
 				a {
 					text-decoration: none;
-					color: #2c8898;
+					color: #32518B;
 				}
 				a:hover {
 					color: #982c61;

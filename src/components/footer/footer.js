@@ -63,7 +63,7 @@ const Footer = () => (
             <ul className="flex flex-row justify-around">
               {socialLinks.map(({ key, href, icon }) => (
                 <li key={key} className="mx-2 mt-2">
-                  <a href={href}>
+                  <a href={href} rel="nofollow noreferrer">
                     <FontAwesomeIcon icon={icon} />
                   </a>
                 </li>
@@ -82,7 +82,7 @@ const Footer = () => (
     <style jsx>{`
       a {
         text-decoration: none;
-        color: #2c8898;
+        color: #32518B;
       }
       a:hover {
         color: #982c61;

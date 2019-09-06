@@ -9,31 +9,10 @@ class ThankYou extends React.Component {
     return (
       <>
         <NextSeo
-          title="WordPress Managed Right - Hosting / Support / SEO | Possible Web"
-          description="Possible Web is a top rated team of WordPress experts. We care for your website how we would want our cared for. Get access today."
-          canonical="https://possibleweb.com"
-          openGraph={{
-            url: "https://possibleweb.com",
-            title:
-              "WordPress Managed Right - Hosting / Support / SEO | Possible Web",
-            description:
-              "Possible Web is a top rated team of WordPress experts. We care for your website how we would want our cared for. Get access today.",
-            images: [
-              {
-                url:
-                  "https://files.possibleweb.com/file/w_600,h_400/possibleweb/fast-affordable-websites.png",
-                width: 800,
-                height: 600,
-                alt: "WordPress Managed Services by Possible Web"
-              }
-            ],
-            site_name: "Possible Web"
-          }}
-          twitter={{
-            handle: "@possibleweb",
-            site: "@site",
-            cardType: "summary_large_image"
-          }}
+          noindex={true}
+          title="Thank You - Please Confirm Your Email"
+          description=""
+          canonical="https://possibleweb.com/thank-you"
         ></NextSeo>
         <div id="page-wrap">
           <div>

@@ -7,7 +7,7 @@ const Button = props => {
   if (props.type === "modal") {
     return (
       <>
-        <button className="modal-open inline-block shadow rounded-lg bg-indigo-900 text-white py-2 px-4">
+        <button className="modal-open inline-block shadow rounded-lg bg-bluedark hover:bg-bluelight text-white py-2 px-4">
           {props.text} <FontAwesomeIcon icon={faArrowRight} />
         </button>
         <style jsx>
@@ -23,7 +23,7 @@ const Button = props => {
     return (
       <>
         <Link href={props.link}>
-          <a className="inline-block shadow rounded-lg bg-indigo-900 text-white py-2 px-4">
+          <a className="inline-block shadow rounded-lg bg-bluedark hover:bg-bluelight text-white py-2 px-4">
             {props.text} <FontAwesomeIcon icon={faArrowRight} />
           </a>
         </Link>

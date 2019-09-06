@@ -30,7 +30,7 @@ const cardThreeBody =
 
 const cardFourTitle = "WORK";
 const cardFourBody =
-  "If you need custom PHP development we've got you covered. From developing websites from scratch, custom plugins, or integrations with 3rd party platforms, we deliver high quality.";
+  "If you need custom PHP development we've got you covered. From developing websites from scratch, custom plugins, or integrations with 3rd party platforms.";
 
 const cardFiveTitle = "DRED";
 const cardFiveBody =
@@ -72,22 +72,19 @@ class Home extends React.Component {
             <div className="mx-4">
               <h1 className="h1 text-gray-900">No Stress, WordPress</h1>
               <p className="text__body text-gray-900">
-                WordPress can suck, hard. Yup, we said it. We make it suck less.
                 Get private hosting, site specific SEO, and unlimited white
                 glove care that makes your WordPress website outperform the
                 competition - converting more leads, and making you more money.
               </p>
               <ul className="mt-3">
                 <li className="text__body">
-                  <FontAwesomeIcon icon={faCheckCircle} /> Sites load in seconds
+                  <FontAwesomeIcon icon={faCheckCircle} /> Private, optimized hosting
                 </li>
                 <li className="text__body">
-                  <FontAwesomeIcon icon={faCheckCircle} /> Technical & Content
-                  SEO
+                  <FontAwesomeIcon icon={faCheckCircle} /> Site-specific SEO
                 </li>
                 <li className="text__body">
-                  <FontAwesomeIcon icon={faCheckCircle} /> Hosting & Unlimited
-                  Support
+                  <FontAwesomeIcon icon={faCheckCircle} /> Unlimited Support & Care
                 </li>
               </ul>
               <div className="mt-6">
@@ -114,9 +111,7 @@ class Home extends React.Component {
               <p className="text__body">
                 Your quest to find reliable WordPress services ends here. If
                 your business relies on WordPress, you can rely on us whether it
-                is hosting and support or SEO and custom development. Get more
-                out of your website by relying on one true partner for all your
-                website needs.
+                is hosting and support or SEO and custom development. 
               </p>
             </div>
 
@@ -124,7 +119,7 @@ class Home extends React.Component {
               <Card
                 title={cardOneTitle}
                 body={cardOneBody}
-                link="/wordpress-services/support"
+                link="/wordpress-services/managed-hosting"
                 text="Start now"
               />
             </div>
@@ -206,10 +201,11 @@ class Home extends React.Component {
           </div>
         </div>
         <div id="section--img">
-          <div className="max-w-xl bg-white rounded shadow px-6 py-6 mx-4 md:mx-auto">
-            <h2 className="h2 mb-2">Contact Us</h2>
+          <div className="max-w-xl bg-bluedark rounded-lg shadow-lg px-6 py-6 mx-4 md:mx-auto">
+            <h2 className="h2 mb-2 text-white">Contact Us</h2>
             <hr />
-            <div className="md:flex justify-between mt-2 text-justify md:text-left">
+            {/* <div data-paperform-id="pw-contact-us"></div> */}
+            {/* <div className="md:flex justify-between mt-2 text-justify md:text-left">
               <div className="mb-4">
                 <div className="my-1">
                   <FontAwesomeIcon icon={faEnvelope} /> hello@possibleweb.com
@@ -232,14 +228,14 @@ class Home extends React.Component {
                 frameBorder="0"
                 allowFullScreen=""
               ></iframe>
-            </div>
+            </div> */}
           </div>
         </div>
         <Schema page="index" />
         <style jsx>
           {`
             #section--img {
-              background: url(https://files.possibleweb.com/file/possible-web-block-sm.jpg)
+              background: url(https://files.possibleweb.com/file/possibleweb/optimize-wordpress-SEO-development-pw.jpg)
                 no-repeat center center fixed;
               -webkit-background-size: cover;
               -moz-background-size: cover;
@@ -248,12 +244,17 @@ class Home extends React.Component {
               padding-top: 200px;
               padding-bottom: 200px;
             }
-          `}
-        </style>
-        <style global jsx>
-          {`
-            body {
-              background: #f2f2f2;
+
+            .background-overlay {
+              background-color: #23375e;
+              opacity: .89;
+              transition: background .3s,border-radius .3s,opacity .3s;
+              height: 100%;
+              width: 100%;
+              top: 0;
+              left: 0;
+              position: absolute;
+              display: block;
             }
           `}
         </style>

@@ -41,7 +41,7 @@ const styles = {
     padding: '0.8em'
   },
   bmItem: {
-    fontSize: '20px',
+    fontSize: '24px',
     margin: '8px 1px 1px 1px'
   },
   bmOverlay: {
