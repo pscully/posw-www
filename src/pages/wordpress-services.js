@@ -216,13 +216,6 @@ const Services = props => {
             }
           `}
         </style>
-        <style global jsx>
-          {`
-            body {
-              background: #f2f2f2;
-            }
-          `}
-        </style>
       </>
     );
 }

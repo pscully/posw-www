@@ -52,13 +52,6 @@ const Share = props => {
 					</div>
 				</div>
 			</div>
-			<style global jsx>
-				{`
-					body {
-						background: #f2f2f2;
-					}
-				`}
-			</style>
 		</div>
 	);
 };

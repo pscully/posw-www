@@ -68,7 +68,7 @@ export default class Care extends React.Component {
 										benefitOne="No setup, monthly, or hidden fees"
 										benefitTwo="Unlimited support & care"
 										benefitThree="Discount on other services"
-										buttonText="Create Account"
+										buttonText="Start Care Service"
 									/>
 									<p className="text__body">
 										Here’s the deal. If you want to focus on growing your

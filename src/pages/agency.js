@@ -87,10 +87,7 @@ class Agency extends React.Component {
 								</p>
 								<div className="flex mt-6">
 									<div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2">
-										<Button
-											text="Services Menu"
-											link="/wordpress-services"
-										/>
+										<Button text="Services Menu" link="/wordpress-services" />
 									</div>
 									{/* <div className="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 px-4">
 										<Button text="Web Design Quote Form" />
@@ -209,7 +206,10 @@ class Agency extends React.Component {
 						advantage of these new technologies.
 					</p>
 					<div className="flex justify-center mt-4">
-						<SiteLink text="Read about custom development" href="/wordpress-services/development" />
+						<SiteLink
+							text="Read about custom development"
+							href="/wordpress-services/development"
+						/>
 					</div>
 				</div>
 				<div id="section--img">
@@ -241,9 +241,13 @@ class Agency extends React.Component {
 				</div>
 				<style jsx>
 					{`
-						#section--img {
-							background: url(https://files.possibleweb.com/file/possible-web-block-sm.jpg)
-								no-repeat center center fixed;
+					#section--img {
+							background: linear-gradient(
+									rgba(4, 20, 27, 0.55),
+									rgba(4, 20, 27, 0.55)
+								),
+								url(https://files.possibleweb.com/file/possibleweb/optimize-wordpress-SEO-development-pw.jpg)
+									no-repeat center center fixed;
 							-webkit-background-size: cover;
 							-moz-background-size: cover;
 							-o-background-size: cover;

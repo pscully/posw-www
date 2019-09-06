@@ -11,12 +11,13 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta name="csrf-token" content="" />
+          <link href="https://use.fontawesome.com/releases/v5.10.2/css/svg-with-js.css" rel="stylesheet"></link>
         </Head>
         <body>
           <Main />
           <NextScript />
         </body>
-        {/* <script src="https://paperform.co/__embed"></script> */}
+        <script src="https://paperform.co/__embed"></script>
       </Html>
     );
   }
