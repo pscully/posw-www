@@ -61,9 +61,9 @@ const Footer = () => (
           </h4>
           <div className="flex md:pl-4 justify-center md:justify-end">
             <ul className="flex flex-row justify-around">
-              {socialLinks.map(({ key, href, icon }) => (
+              {socialLinks.map(({ key, href, icon, label }) => (
                 <li key={key} className="mx-2 mt-2">
-                  <a href={href} rel="nofollow noreferrer">
+                  <a href={href} rel="nofollow noreferrer" aria-label={label}>
                     <FontAwesomeIcon icon={icon} />
                   </a>
                 </li>

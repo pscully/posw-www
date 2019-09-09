@@ -1,5 +1,5 @@
 import "../style.css";
-import React from "react";
+import { Component } from "react";
 import { NextSeo } from "next-seo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
@@ -50,14 +50,14 @@ const cardFiveTitle = "DRED";
 const cardFiveBody =
 	"Our version of SEO. Digital Real Estate Domination - it's SEO but to the next level. We rank more than just your website, we get you as many spots as possible on search results.";
 
-class Home extends React.Component {
+class Home extends Component {
 	render() {
 		return (
 			<>
 				<NextSeo
 					title="WordPress Managed Right - Hosting / Support / SEO | Possible Web"
 					description="Possible Web is a top rated team of WordPress experts. We care for your website how we would want our cared for. Get access today."
-					canonical="https://possibleweb.com"
+					canonical="https://posw-www.netlify.com/"
 					openGraph={{
 						url: "https://possibleweb.com",
 						title:
@@ -220,69 +220,8 @@ class Home extends React.Component {
 						<SiteLink text="Learn more about us." href="/agency" />
 					</div>
 				</div>
-				{/* <div id="section--img">
-					<div className="max-w-xl bg-white rounded shadow px-6 py-6 mx-4 md:mx-auto">
-						<h2 className="h2 mb-2">Supercharge Your Business</h2>
-						<p className="text__body">
-							Your business deserves the best. We are here to deliver that.
-							Transform your website from an online brochure, into a well-oiled
-							performance machine.
-						</p>
-						<hr />
-						<div data-paperform-id="pw-contact-us"></div>
-						<div className="md:flex justify-between mt-2 text-justify md:text-left">
-							<div className="mb-4">
-								<div className="my-1">
-									<FontAwesomeIcon icon={faEnvelope} /> hello@possibleweb.com
-								</div>
-								<div className="my-1">
-									<FontAwesomeIcon icon={faEnvelope} /> care@possibleweb.com
-								</div>
-								<div className="my-1">
-									<FontAwesomeIcon icon={faAddressCard} /> Charlotte, NC
-								</div>
-								<div className="my-1">
-									<FontAwesomeIcon icon={faHandshake} /> @possibleweb
-								</div>
-								<div className="my-1">
-									<FontAwesomeIcon icon={faPhoneSquare} /> 704-594-5796
-								</div>
-							</div>
-							
-						</div>
-					</div>
-				</div> */}
 				<Schema page="index" />
-				<style jsx>
-					{`
-						#section--img {
-							background: linear-gradient(
-									rgba(4, 20, 27, 0.55),
-									rgba(4, 20, 27, 0.55)
-								),
-								url(https://files.possibleweb.com/file/possibleweb/optimize-wordpress-SEO-development-pw.jpg)
-									no-repeat center center fixed;
-							-webkit-background-size: cover;
-							-moz-background-size: cover;
-							-o-background-size: cover;
-							background-size: cover;
-							padding-top: 200px;
-							padding-bottom: 200px;
-						}
-
-						.background-overlay {
-							background-color: #23375e;
-							opacity: 0.89;
-							transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-							height: 100%;
-							width: 100%;
-							top: 0;
-							left: 0;
-							position: absolute;
-							display: block;
-						}
-					`}
-				</style>
+				
 			</>
 		);
 	}

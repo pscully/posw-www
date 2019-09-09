@@ -2,7 +2,6 @@ import React from "react";
 import App from "next/app";
 import Nav from "../components/navigation/nav";
 import Footer from "../components/footer/footer";
-import Modal from "../components/modal/modal";
 
 class Layout extends React.Component {
 	render() {
@@ -18,7 +17,6 @@ class Layout extends React.Component {
 				</div>
 			</div>
       <Footer />
-      <Modal />
 	  <style jsx>
 		  {`
 			#outer-container {
