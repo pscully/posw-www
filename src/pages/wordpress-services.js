@@ -7,6 +7,26 @@ import Button from "../components/button/button";
 import Form from "../components/form/form";
 import Link from "next/link";
 import "../style.css";
+import Particles from "react-particles-js";
+
+const particlesOptions = {
+	particles: {
+		number: {
+			value: 50
+		},
+		size: {
+			value: 3
+		}
+	},
+	interactivity: {
+		events: {
+			onhover: {
+				enable: true,
+				mode: "repulse"
+			}
+		}
+	}
+};
 
 const cardOneTitle = "CARE";
 const cardOneBody =
@@ -59,11 +79,15 @@ const Services = props => {
             cardType: "summary_large_image"
           }}
         />
+        <Particles
+					className="particles hidden md:block"
+					params={particlesOptions}
+				/>
         <div className="container flex flex-wrap overflow-hidden mx-auto">
           <div className="w-full overflow-hidden sm:w-full md:w-full lg:w-1/2 xl:w-1/2 pt-4 lg:py-12">
             <div className="mx-4">
-              <h1 className="h1 text-gray-900">WordPress Services</h1>
-              <p className="text__body text-gray-900">
+              <h1 className="h1 text-white">WordPress Services</h1>
+              <p className="text__body text-white">
                 Our WordPress services are based on giving you more. As a
                 Possible Web client you get the best technology, unlimited
                 support, discounts on other services, and more. Whether you just
@@ -90,8 +114,8 @@ const Services = props => {
         <div className="container mx-auto p-4">
           <div className="flex flex-wrap items-center -mx-2">
             <div className="w-full lg:w-1/3 sm:w-1/2 px-2">
-              <h2 className="h2">Fair Pricing. Tons of Value.</h2>
-              <p className="text__body">
+              <h2 className="h2 text-white">Fair Pricing. Tons of Value.</h2>
+              <p className="text__body text-white">
                 Our team specializes in WordPress. We can design, build, support, maintain, 
                 and market a business website for you. All of your website needs in one place. 
                 

@@ -1,4 +1,5 @@
 const Links = [
+  { href: "/", label: "HOME"},
   { href: "/agency", label: "ABOUT US" },
   { href: "/wordpress-services", label: "SERVICES" },
   { href: "/share", label: "LEARN" },

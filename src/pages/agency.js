@@ -11,6 +11,26 @@ import Card from "../components/card/card";
 import Button from "../components/button/button";
 import SiteLink from "../components/link/link";
 import "../style.css";
+import Particles from "react-particles-js";
+
+const particlesOptions = {
+	particles: {
+		number: {
+			value: 50
+		},
+		size: {
+			value: 3
+		}
+	},
+	interactivity: {
+		events: {
+			onhover: {
+				enable: true,
+				mode: "repulse"
+			}
+		}
+	}
+};
 
 const pageTitle = "Possible Web // Websites & SEO On Demand";
 
@@ -70,19 +90,21 @@ class Agency extends React.Component {
 					// 	cardType: "summary_large_image"
 					// }}
 				/>
+				<Particles
+					className="particles"
+					params={particlesOptions}
+				/>
 				<div>
 					<div className="container flex flex-wrap overflow-hidden mx-auto">
 						<div className="w-full overflow-hidden sm:w-full md:w-full lg:w-1/2 xl:w-1/2 pt-4 lg:py-12">
 							<div className="mx-4">
-								<h1 className="h1 text-gray-900">We are Possible Web.</h1>
-								<p className="text__body text-gray-900">
+								<h1 className="h1 text-white">We are Possible Web.</h1>
+								<p className="text__body text-white">
 									Since 2011 we have built, optimized, managed, fixed, updated,
 									and marketed hundreds of WordPress websites for businesses
 									around the world. Now, with our brand new platform and
 									technology we are making WordPress work even harder for you
-									and your business. Not on WordPress? For the right project, we
-									are available for custom marketing strategy. We are
-									headquartered in Charlotte, NC. Contact us or request your
+									and your business. Contact us or request your
 									invite to our Client Dashboard now.
 								</p>
 								<div className="flex mt-6">
@@ -107,8 +129,8 @@ class Agency extends React.Component {
 				<div className="container mx-auto my-8 p-4">
 					<div className="flex flex-wrap items-center -mx-2">
 						<div className="w-full lg:w-1/3 sm:w-1/2 px-2">
-							<h2 className="h2">Our clients say...</h2>
-							<p className="text__body">
+							<h2 className="h2 text-white">Our clients say...</h2>
+							<p className="text__body text-white">
 								Browse some of our latest reviews, we think they speak volumes
 								about how much we care.
 							</p>
@@ -189,7 +211,7 @@ class Agency extends React.Component {
 					</div>
 				</div>
 				<div className="container flex flex-col mx-auto md:my-24">
-					<p className="text__body text-center mx-12">
+					<p className="text__body text-white text-center mx-12">
 						WordPress sucks! What else you got? Wow, such language! Just kidding
 						– we curse about WordPress all the time. In fact, we wrote about it
 						here. It’s true. WordPress definitely has it’s limitations. It’s
@@ -254,13 +276,6 @@ class Agency extends React.Component {
 							background-size: cover;
 							padding-top: 200px;
 							padding-bottom: 200px;
-						}
-					`}
-				</style>
-				<style global jsx>
-					{`
-						body {
-							background: #f2f2f2;
 						}
 					`}
 				</style>

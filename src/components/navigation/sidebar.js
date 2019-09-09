@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import Menu from "react-burger-menu/lib/menus/slide";
 import Link from "next/link";
 import Links from "./links";
+import Button from "../button/button";
 
 const styles = {
   bmBurgerButton: {
@@ -29,7 +30,7 @@ const styles = {
     height: '100%'
   },
   bmMenu: {
-    background: '#373a47',
+    background: '#2b4365',
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em'
   },
@@ -37,7 +38,7 @@ const styles = {
     fill: '#373a47'
   },
   bmItemList: {
-    color: '#b8b7ad',
+    color: '#f2f2f2',
     padding: '0.8em'
   },
   bmItem: {
@@ -73,20 +74,35 @@ const Navigation = () => {
   const ctx = useContext(MenuContext);
 
   return (
+    <>
     <Menu
       width={"45%"}
       styles={styles}
       isOpen={ctx.isMenuOpen}
       onStateChange={state => ctx.stateChangeHandler(state)}
     >
+    <ul>
       {Links.map(({ key, href, label }) => (
-        <li key={key} className="ml-4 inline-block menu-item">
+        <li key={key} className="ml-4 pt-3 menu-item">
           <Link href={href}>
             <a onClick={() => ctx.closeMenu()}>{label}</a>
           </Link>
         </li>
       ))}
+    </ul>
+    <div className="ml-4 pt-3" >
+      <Button text="Start Now" link="/" />
+    </div>
     </Menu>
+    {/* <style jsx>
+      {`
+        ul {
+          display: flex;
+          flex-direction: column;
+        }
+      `}
+    </style> */}
+    </>
   );
 };
 

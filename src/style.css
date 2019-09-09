@@ -34,7 +34,7 @@ html {
 body {
   margin: 0;
   height: 100%;
-  background: #f2f2f2;
+  background: #2b4365;
 }
 
 /**
@@ -477,10 +477,21 @@ template {
   display: none;
 }
 
+/* Background */
+
+.particles {
+  position: fixed;
+  right: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
 /* Custom Classes using Tailwind */
 
 .text__body {
-  @apply mt-3 text-xl text-black leading-relaxed;
+  @apply mt-3 text-xl leading-relaxed;
 }
 
 .link__body {

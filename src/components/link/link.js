@@ -7,7 +7,7 @@ const SiteLink = props => {
       <style jsx>{`
         a {
           text-decoration: none;
-          color: #32518B;
+          color: #f2f2f2;
         }
         a:hover {
           color: #982c61;

@@ -12,7 +12,7 @@ class Layout extends React.Component {
 			<div id="outer-container">
 				<div id="page-wrap">
 					<Nav />
-					<div>
+					<div id="particles-js">
 							{children}
 					</div>
 				</div>

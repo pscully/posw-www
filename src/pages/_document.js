@@ -17,6 +17,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
+        <script src="https://cdn.rawgit.com/progers/pathseg/master/pathseg.js"></script>
       </Html>
     );
   }

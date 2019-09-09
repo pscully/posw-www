@@ -7,6 +7,26 @@ import Card from "../components/card/card";
 import Button from "../components/button/button";
 import SiteLink from "../components/link/link";
 import Schema from "../components/schema/schema";
+import Particles from "react-particles-js";
+
+const particlesOptions = {
+	particles: {
+		number: {
+			value: 50
+		},
+		size: {
+			value: 3
+		}
+	},
+	interactivity: {
+		events: {
+			onhover: {
+				enable: true,
+				mode: "repulse"
+			}
+		}
+	}
+};
 
 const pageTitle = "Possible Web // Websites & SEO On Demand";
 
@@ -61,24 +81,28 @@ class Home extends React.Component {
 						cardType: "summary_large_image"
 					}}
 				/>
+				<Particles
+					className="particles hidden md:block"
+					params={particlesOptions}
+				/>
 				<div className="container flex flex-wrap overflow-hidden mx-auto">
 					<div className="w-full overflow-hidden sm:w-full md:w-full lg:w-1/2 xl:w-1/2 pt-4 lg:py-12">
 						<div className="mx-4">
-							<h1 className="h1 text-gray-900">No Stress, WordPress</h1>
-							<p className="text__body text-gray-900">
+							<h1 className="h1 text-white">No Stress, WordPress</h1>
+							<p className="text__body text-white">
 								Get private hosting, site specific SEO, and unlimited white
 								glove care that makes your WordPress website outperform the
 								competition - converting more leads, and making you more money.
 							</p>
 							<ul className="mt-3">
-								<li className="text__body">
+								<li className="text__body text-white">
 									<FontAwesomeIcon icon={faCheckCircle} /> Private, optimized
 									hosting
 								</li>
-								<li className="text__body">
+								<li className="text__body text-white">
 									<FontAwesomeIcon icon={faCheckCircle} /> Site-specific SEO
 								</li>
-								<li className="text__body">
+								<li className="text__body text-white">
 									<FontAwesomeIcon icon={faCheckCircle} /> Unlimited Support &
 									Care
 								</li>
@@ -103,8 +127,8 @@ class Home extends React.Component {
 				<div className="container mx-auto my-8 p-4">
 					<div className="flex flex-wrap items-center -mx-2">
 						<div className="w-full lg:w-1/3 sm:w-1/2 px-2">
-							<h2 className="h2">WordPress Services</h2>
-							<p className="text__body">
+							<h2 className="h2 text-white">WordPress Services</h2>
+							<p className="text__body text-white">
 								Your quest to find reliable WordPress services ends here. If
 								your business relies on WordPress, you can rely on us whether it
 								is hosting and support or SEO and custom development.
@@ -179,7 +203,7 @@ class Home extends React.Component {
 					</div>
 				</div>
 				<div className="container flex flex-col mx-auto md:my-24">
-					<p className="text__body text-center mx-12">
+					<p className="text__body text-white text-center mx-12">
 						We are Possible Web. Since 2012 we have been providing expert
 						WordPress and digital marketing services to businesses across the
 						United States. Simply put, we are WordPress experts. Anything you
@@ -196,7 +220,7 @@ class Home extends React.Component {
 						<SiteLink text="Learn more about us." href="/agency" />
 					</div>
 				</div>
-				<div id="section--img">
+				{/* <div id="section--img">
 					<div className="max-w-xl bg-white rounded shadow px-6 py-6 mx-4 md:mx-auto">
 						<h2 className="h2 mb-2">Supercharge Your Business</h2>
 						<p className="text__body">
@@ -206,7 +230,7 @@ class Home extends React.Component {
 						</p>
 						<hr />
 						<div data-paperform-id="pw-contact-us"></div>
-						{/* <div className="md:flex justify-between mt-2 text-justify md:text-left">
+						<div className="md:flex justify-between mt-2 text-justify md:text-left">
 							<div className="mb-4">
 								<div className="my-1">
 									<FontAwesomeIcon icon={faEnvelope} /> hello@possibleweb.com
@@ -225,9 +249,9 @@ class Home extends React.Component {
 								</div>
 							</div>
 							
-						</div> */}
+						</div>
 					</div>
-				</div>
+				</div> */}
 				<Schema page="index" />
 				<style jsx>
 					{`
