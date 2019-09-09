@@ -1,6 +1,11 @@
 const postCSS = require('@zeit/next-css');
+const mavenPro = require('typeface-maven-pro');
 
-module.exports = postCSS();
+var exports = module.exports = {}
+
+exports.postCSS = postCSS();
+
+exports.mavenPro = mavenPro;
 
 // const client = require('./client')
 
