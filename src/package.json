@@ -15,7 +15,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.10.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@sanity/block-content-to-react": "^2.0.6",
-    "@sanity/client": "^0.142.0",
+    "@sanity/client": "^1.148.0",
     "@sanity/image-url": "^0.140.12",
     "@zeit/next-css": "^1.0.1",
     "animejs": "^3.1.0",
