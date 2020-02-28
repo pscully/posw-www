@@ -32,6 +32,6 @@
     "react-dom": "16.9.0",
     "react-particles-js": "^2.7.0",
     "tailwindcss": "^1.1.2",
-    "typeface-maven-pro": "^0.0.75"
+    "typeface-maven-pro": "^1.1.4"
   }
 }
