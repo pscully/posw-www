@@ -30,7 +30,7 @@
     "react": "16.9.0",
     "react-burger-menu": "^2.6.11",
     "react-dom": "16.9.0",
-    "react-particles-js": "^2.7.0",
+    "react-particles-js": "^3.1.0",
     "tailwindcss": "^1.1.2",
     "typeface-maven-pro": "^0.0.75"
   }
